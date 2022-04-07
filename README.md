@@ -390,7 +390,7 @@ Disini menggunakan **form button** dengan **function javascript** dan **html for
 ## 11). PILIHAN MENGGUNAKAN CHECKBOX DENGAN PERHITUNGAN OTOMATIS
 
 ## CODE DAN TAMPILAN DIBROWSER NYA!
-[html_dom_checkbox](img/html_dom_chechkbox.png)
+![html_dom_checkbox](img/html_dom_chechkbox.png)
 
 **PENJELASAN**
 
