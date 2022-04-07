@@ -344,4 +344,207 @@ Disini membuat **form input** dengan ***function javascript*** dan pengondisian 
 
 ## 10). FORM BUTTON
 
-test
+## CODE DAN TAMPILAN DIBROWSER NYA!
+![form_button](img/form_button.png)
+
+**PENJELASAN**
+
+Disini menggunakan **form button** dengan **function javascript** dan **html form button** hasil nya adalah seperti contoh gambar di atas,saya mengklik warna hijau dan teks kuning.
+
+**code html dan script**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objek Document</title>
+</head>
+<body>
+    <script lang="javascript">
+        function ubahWarnaLB(warna) {
+            document.bgColor = warna;
+        }
+        function ubahWarnaLD(warna) {
+            document.fgColor = warna;
+        }
+    </script>
+    <h1>Tes</h1>
+    <form action="">
+        <input type="button" value="Latar Belakang Hijau" onclick="ubahWarnaLB('GREEN')">
+        <input type="button" value="Latar Belakang Putih" onclick="ubahWarnaLB('WHITE')">
+        <input type="button" value="Teks Kuning" onclick="ubahWarnaLD('YELLOW')">
+        <input type="button" value="Teks Biru" onclick="ubahWarnaLD('BLUE')">
+    </form>
+    <script lang="javascript">
+        document.write("Dimodifikasi terakhir pada " + document.lastModified);
+    </script>
+</body>
+</html>
+```
+
+# HTML DOM
+
+## 11). PILIHAN MENGGUNAKAN CHECKBOX DENGAN PERHITUNGAN OTOMATIS
+
+## CODE DAN TAMPILAN DIBROWSER NYA!
+[html_dom_checkbox](img/html_dom_chechkbox.png)
+
+**PENJELASAN**
+
+Disini menggunakan **HTML DOM** dengan **input type checkbox** sebagai contoh gambar di atas menghitung secara otomatis.
+
+**code html dan script**
+
+```html
+<!DOCTYPE html>
+<!-- file daftar menu.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Menu</title>
+    <script lang="javascript">
+        function hitung(ele) {
+            var total = document.getElementById('total').value;
+                total = (total ? parseInt(total) : 0);
+            var harga = 0;
+
+            if (ele.checked) {
+                harga = ele.value;
+                total += parseInt(harga);
+            } else {
+                harga = ele.value;
+                if (total > 0)
+                    total -= parseInt(harga);
+            }
+            document.getElementById('total').value = total;
+        }
+    </script>
+</head>
+<body>
+    <h1>Daftar Menu Makanan</h1>
+    <label><input type="checkbox" value="5000" name="menu1" id="menu1" onclick="hitung(this);">Ayam Goreng Rp. 5.000</label><br>
+    <label><input type="checkbox" value="500" name="menu2" id="menu2" onclick="hitung(this);">Tempe Goreng Rp. 500</label><br>
+    <label><input type="checkbox" value="2500" name="menu3" id="menu3" onclick="hitung(this);">Telur Dadar Rp. 2.500</label><hr>
+    <strong>Total Bayar: Rp. <input type="text" name="total" id="total"></strong>
+</body>
+</html>
+```
+
+# PERTANYAAN DAN TUGAS
+
+## 1). BUAT SCRIPT UNTUK MELAKUKAN VALIDASI PADA ISIAN FORM.
+
+## CONTOH CODE DAN TAMPILAN DIBROWSER NYA!
+![validasi_form](img/validasi_form.png)
+
+**PENJELASAN**
+
+Ini adalah contoh membuat **form validasi** dengan menggunakan **script** atau ***javascript*** terdapat beberapa pengondisian,jika data tidak di isi dengan lengkap maka akan terdapat **prompt** ***isi alamat anda dengan lengkap*** karena harus mengisi dengan lengkap seperti contoh gambar di atas
+
+![validasi_data](img/lengkapkan_data.png)
+
+Sementara contoh gambar diatas adalah ketika data tidak di isi dengan lengkap,maka akan ada **prompt** isi alamat anda dengan lengkap,tidak akan bisa disubmit karena data belum lengkap.
+
+**code html dan script**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validasi</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        function validasiForm() {
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var alamat = document.getElementById("alamat").value;
+            if (nama != "" && email != "" && alamat != "") {
+                return true;
+            } else {
+                alert('Isi Alamat Anda dengan lengkap !');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+     <div class="login">
+        <h2>VALIDASI DATA ANDA</h2>
+        <form action="#" method="POST" onSubmit="return validasiForm()">
+            <div>
+                <label>Nama Lengkap:</label>
+                <input type="text" name="nama" id="nama" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label>Alamat:</label>
+                <textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Daftar" class="tombol">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+```
+
+```css
+body {
+    background: #4cc9f0;
+    font-family: sans-serif;
+    padding: 100px;
+  }
+  
+  h2{
+      text-align: center;
+      font-size: 35px;
+      color: #555;
+  }
+
+  .login {
+    padding: 1em;
+    margin: 2em auto;
+    width: 30em;
+    background: #fff;
+    border-radius: 3px;
+  }
+  
+  label {
+    font-size: 10pt;
+    color: #555;
+  } 
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 8px;
+    width: 95%;
+    background: #efefef;
+    border: 0;
+    font-size: 10pt;
+    margin: 6px 0px; 
+  }
+   
+  .tombol {
+    background: #3498db;
+    color: #fff;
+    border: 0;
+    padding: 5px 8px;
+  } 
+   .tombol:hover{
+      background-color: #555;
+  }
+```
+
+## PERTEMUAN KALI INI CUKUP SAMPAI DISINI DAN SAMPAI BERTEMU DIPERTEMUAN BERIKUT NYA
+
+### @HERLIYANSYAH
