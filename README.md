@@ -165,6 +165,182 @@ Menggunakan Function dengan body onload di javascript seperti gambar di atas
 </html>
 ```
 
-## DASAR PEMROGRAMAN DI JAVASCRIPT
+# DASAR PEMROGRAMAN DI JAVASCRIPT
 
 ## 6). OPERASI DASAR ARITMATIKA
+
+## CODE DAN TAMPILAN DIBROWSER NYA!
+![aritmatika](img/aritmatika.png)
+
+**PENJELASAN**
+
+Operasi Dasar Artimatika dalam ***javascript*** seperti contoh gambar di atas.
+
+**code html dan script**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Program Javascript</title>
+    <script lang="javascript">
+        function test (val1,val2)
+        {
+            document.write("<br>"+"perkalian : val1*val2 "+"<br>")
+            document.write(val1*val2)
+            document.write("<br>"+"pembagian : val1/val2 "+"<br>")
+            document.write(val1/val2)
+            document.write("<br>"+"penjumlahan : val1+val2 "+"<br>")
+            document.write(val1+val2)
+            document.write("<br>"+"pengurangan : val1-val2 "+"<br>")
+            document.write(val1-val2)
+            document.write("<br>"+"modulus : val1%val2 "+"<br>")
+            document.write(val1%val2)
+        }
+    </script>
+</head>
+<body>
+    <input type="button" name="button1" value="arithmetic" onclick=test(9,4)>
+</body>
+</html>
+```
+
+## 7). SELEKSI KONDISI (IF/ELSE)
+
+## CODE DAN TAMPILAN DIBROWSER NYA!
+![if_else](img/if_else.png)
+
+**PENJELASAN**
+
+Disin adalah program seleksi kondisi dari **if else** disitu **if** nya jika nilai lebih sama dengan 60 berarti lulus dan **else** nya jika dibawah 60 berati tidak lulus,sementara saya memberi nilai 80 yang berarti hasil nya adalah lulus.
+
+![hasil](img/hasil.png)
+
+ini adalah contoh output dari seleksi kondisi **if else** seperti contoh gambar diatas.
+
+**code html dan script**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh if-else</title>
+</head>
+<body>
+    <script lang="javascript">
+        var nilai = prompt("nilai (0-100): ", 0);
+        var hasil = "";
+        if (nilai >=60)
+        hasil = "lulus";
+        else
+        hasil = "tidak lulus";
+        document.write("hasil: " + hasil);
+    </script>
+</body>
+</html>
+```
+
+## 8). PENGGUNAAN OPERATOR SWITCH UNTUK SELEKSI KONDISI
+
+## CODE DAN TAMPILAN DIBROWSER NYA!
+![switch_operator](img/switch_case.png)
+
+**PENJELASAN**
+
+Penggunaan operator switch untuk seleksi kondisi,disini saya menulis program **switch case** sebagai seleksi kondisi,disitu saya memasukan angka 4 sebagai seleksi nya kemudian output nya akan keluar argument **bilangan empat**
+
+![hasil_switch](img/hasil_switch.png)
+
+gambar di atas adalah hasil output dari pemilihan **switch dengan case 4** hasil seperti contoh gambar di atas.
+
+**code html dan script**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Program Javascript</title>
+    <script lang="javascript">
+        function test ()
+        {
+            val1=window.prompt("input nilai (1-5):")
+            switch (val1)
+            {
+                case "1" :
+                    document.write("bilangan satu")
+                    break
+                case "2" :
+                    document.write("bilangan dua")
+                    break
+                case "3" :
+                    document.write("bilangan tiga")
+                    break
+                case "4" :
+                    document.write("bilangan empat")
+                    break
+                case "5" :
+                    document.write("bilangan lima")
+                    break 
+                default  :
+                    document.write("bilangan lainnya")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" name="button1" value="switch" onclick=test()>
+</body>
+</html>
+```
+
+# PEMBUATAN FORM
+
+## 9). FORM INPUT
+
+## CODE DAN TAMPILAN DIBROWSER NYA!
+![form_input](img/form_input.png)
+
+**PENJELASAN**
+
+Disini membuat **form input** dengan ***function javascript*** dan pengondisian **if/else** seperti gambar di atas saya memilih angka 4 maka akan menjadi **bilangan genap** .
+
+**code html dan script**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form input</title>
+    <script lang="javascript">
+        function test () {
+            var val1=document.kirim.T1.value
+            if (val1%2==0)
+                document.kirim.T2.value="bilangan genap"
+            else
+                document.kirim.T2.value="bilangan ganjil"
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post" name="kirim">
+        <p>BIL <input type="text" name="T1" id="T1" size="20"> MERUPAKAN BIL <input type="text" name="T2" id="T2" size="20"></p>
+        <p><input type="button" value="TEBAK" name="B1" onclick=test()></p>
+    </form>
+</body>
+</html>
+```
+
+## 10). FORM BUTTON
+
